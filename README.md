@@ -13,7 +13,7 @@ Bugs are very likely to appear. This is my first try in plugins and there was no
 
 ## Installation
 
- * Unpack the [zip-File](https://github.com/migdal-or/Mgik_Replace/archive/master.zip)
+ * Unpack the [zip-File](https://github.com/migdal-or/Mgik_Replace/archive/main.zip)
  * Move the folder "mgik_replace" to your plugins directory
  * Enable "mgik_replace" in TT-RSS's Preferences -> Plugins
  * You should probably rightclick to your feed and select DEBUG - Force refetch && Force rehash, or even delete-subscribe feed

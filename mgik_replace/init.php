@@ -4,7 +4,7 @@ class Mgik_Replace extends Plugin {
     private $host;
 
     function about() {
-        return array(1.1,
+        return array(1.2,
             "Fix broken URLs at mosgorizbirkom.ru",
             "Dmitry A. Zvorykin");
     }
@@ -22,9 +22,7 @@ class Mgik_Replace extends Plugin {
         if (strpos($article["link"], "mosgorizbirkom.ru") !== FALSE) {
 			//http://mosgorizbirkom.ru/web/guest/http://mosgorizbirkom.ru/web/guest/
 			//_debug('fgdfgtrg ' . $article["link"]);
-			
-			$article["link"] = str_replace("http://mosgorizbirkom.ru/web/guest/http&#x3a;&#x2f;&#x2f;mosgorizbirkom&#x2e;ru&#x2f;web&#x2f;guest&#x2f;", "http://mosgorizbirkom.ru/web/guest/", $article["link"]);
-			
+
 			$article["link"] = str_replace("&#x3d;", "=", $article["link"]);
 			$article["link"] = str_replace("&#x3a;", ":", $article["link"]);
 			$article["link"] = str_replace("&#x3f;", "?", $article["link"]);
@@ -33,6 +31,9 @@ class Mgik_Replace extends Plugin {
 			$article["link"] = str_replace("&#x2f;", "/", $article["link"]);
 			$article["link"] = str_replace("&#x2e;", ".", $article["link"]);
 			
+			
+			$article["link"] = str_replace("http://mosgorizbirkom.ru/web/guest/http://mosgorizbirkom.ru/", "http://mosgorizbirkom.ru/", $article["link"]);
+
         }
         return $article;
     }
